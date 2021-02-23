@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+/* Links */
+
+#links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#links li {
+    display: block;
+    list-style: none;
+}
+
+#links li a{
+    text-decoration: none;
+    padding: 0 10px 0 10px;
+    color: black;
+}
+
+#links .github {
+    max-width: 5%;
+    display: block;
+}
+
+#links .stack-overflow {
+    max-width: 5%;
+    display: block;
+}
+/* Hamburger */
+
+#hamburger {
+    position: absolute;
+    top: 2.2rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 30px;
+    height: 21px;
+}
+
+#hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+@media (max-width: 400px) {
+   #hamburger {
+        display: flex;
+    }
+
+    #links {
+        display: none;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #links.active {
+        display: flex;
+    }
+}
+
+/* SECTION */
+
+section {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    margin: 0 2% 0 2%;
+}
